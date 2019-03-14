@@ -20,9 +20,14 @@ Plugin 'altercation/vim-colors-solarized'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
- syntax enable
+
+ syntax on
  set background=dark
  colorscheme solarized
 
 " set line numbers
 set number
+
+" set cursorline
+set cursorline
+

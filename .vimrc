@@ -9,8 +9,6 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-vdebug/vdebug'
@@ -20,10 +18,9 @@ Plugin 'vim-vdebug/vdebug'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-
-" set line numbers
-set number
-
-" set cursorline
-set cursorline
-
+syntax on  				"Syntax hihglight
+set number nu				"Line Numbers
+set cursorline  			"color the cursorline
+set autoindent				"autoindenting
+set smartindent				"Smart indenting
+set ruler				"show a ruler wi line number and % of file in status line

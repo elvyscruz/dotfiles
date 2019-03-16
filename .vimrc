@@ -13,7 +13,6 @@ Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-vdebug/vdebug'
 
 
@@ -21,10 +20,6 @@ Plugin 'vim-vdebug/vdebug'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-
- syntax on
- set background=dark
- colorscheme solarized
 
 " set line numbers
 set number

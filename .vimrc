@@ -32,4 +32,6 @@ set hlsearch incsearch			"highlight search as you type
 " ALE settings
 let g:ale_sign_column_always = 1
 
+imap <tab><tab> <c-x><c-o>
+
 

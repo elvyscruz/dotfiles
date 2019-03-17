@@ -11,7 +11,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-vdebug/vdebug'
-Plugin 'scrooloose/syntastic'
+Plugin 'w0rp/ale'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -23,14 +24,12 @@ set cursorline  			"color the cursorline
 set autoindent				"autoindenting
 set smartindent				"Smart indenting
 set ruler				"show a ruler wi line number and % of file in status line
+set lazyredraw				"Performace suggesntion
+set ignorecase smartcase		"Ignore case in searching	
+set undofile				"preserve undo history 
+set hlsearch incsearch			"highlight search as you type
+
+" ALE settings
+let g:ale_sign_column_always = 1
 
 
-"Syntastic Plugin Settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0

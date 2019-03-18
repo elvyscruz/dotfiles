@@ -12,15 +12,10 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-vdebug/vdebug'
 Plugin 'w0rp/ale'
-Plugin 'junegunn/fzf'
-Plugin 'mattn/emmet-vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'itchyny/lightline.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'honza/vim-snippets'
-Plugin 'bling/vim-airline'
-
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'sirver/ultisnips'
+Plugin 'vim-airline/vim-airline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -40,6 +35,5 @@ set hlsearch incsearch			"highlight search as you type
 " ALE settings
 let g:ale_sign_column_always = 1
 
-imap <tab><tab> <c-x><c-o>
 
 

@@ -12,6 +12,14 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-vdebug/vdebug'
 Plugin 'w0rp/ale'
+Plugin 'junegunn/fzf'
+Plugin 'mattn/emmet-vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'itchyny/lightline.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'honza/vim-snippets'
+Plugin 'bling/vim-airline'
 
 
 " All of your Plugins must be added before the following line

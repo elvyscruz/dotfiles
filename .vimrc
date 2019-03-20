@@ -9,12 +9,8 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-surround'
 Plugin 'vim-vdebug/vdebug'
 Plugin 'w0rp/ale'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'sirver/ultisnips'
 Plugin 'vim-airline/vim-airline'
 
 " All of your Plugins must be added before the following line

@@ -35,3 +35,17 @@ let g:ale_sign_column_always = 1
 " Completion improvements
 set completeopt=menu,menuone,preview,noselect,noinsert
 
+
+
+
+"Disable Arrow keys in Escape mode
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
+ " Disable Arrow keys in Insert mode
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>

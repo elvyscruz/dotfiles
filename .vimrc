@@ -31,7 +31,7 @@ set hlsearch incsearch			"highlight search as you type
 let g:ale_sign_column_always = 1
 
 " Completion improvements
-set completeopt=menu,menuone,preview,noselect,noinsert
+"set completeopt=menu,menuone,preview,noselect,noinsert
 
 
 
@@ -48,5 +48,5 @@ imap <left> <nop>
 imap <right> <nop>
 
 set tabstop=4
-set shiftwidtht
+set shiftwidth=4
 

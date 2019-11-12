@@ -12,9 +12,9 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-vdebug/vdebug'
 Plugin 'w0rp/ale'
 Plugin 'vim-airline/vim-airline'
+Plugin 'prettier/vim-prettier'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -24,12 +24,12 @@ syntax on  				"Syntax hihglight
 set number nu				"Line Numbers
 set cursorline  			"color the cursorline
 set ruler				"show a ruler wi line number and % of file in status line
-set undofile				"preserve undo history 
 set hlsearch incsearch			"highlight search as you type
 
 " ALE settings
 let g:ale_sign_column_always = 1
-
+let g:ale_fixers = { 'javascript': ['eslint'] }
+let g:ale_fix_on_save = 1
 " Completion improvements
 "set completeopt=menu,menuone,preview,noselect,noinsert
 

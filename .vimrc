@@ -5,16 +5,14 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 
-let g:ale_completion_enabled = 1
-
 
 call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'w0rp/ale'
+Plugin 'dense-analysis/ale'
 Plugin 'vim-airline/vim-airline'
-Plugin 'prettier/vim-prettier'
+Plugin 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -23,17 +21,15 @@ filetype plugin indent on    " required
 syntax on  				"Syntax hihglight
 set number nu				"Line Numbers
 set cursorline  			"color the cursorline
-set ruler				"show a ruler wi line number and % of file in status line
 set hlsearch incsearch			"highlight search as you type
 
 " ALE settings
 let g:ale_sign_column_always = 1
-let g:ale_fixers = { 'javascript': ['eslint'] }
+let g:ale_fixers = {
+			\ '*': ['remove_trailing_lines', 'trim_whitespace'],
+			\  'javascript': ['prettier','eslint']
+			\ }
 let g:ale_fix_on_save = 1
-" Completion improvements
-"set completeopt=menu,menuone,preview,noselect,noinsert
-
-
 
 "Disable Arrow keys in Escape mode
 map <up> <nop>
@@ -47,6 +43,11 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 
+
+" vim airline settings
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='bubblegum'

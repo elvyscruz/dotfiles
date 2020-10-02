@@ -21,24 +21,17 @@ Plugin 'kien/ctrlp.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-syntax on
-set number nu
+set completeopt+=noinsert
+
+syntax on  				"Syntax hihglight
+set number nu				"Line Numbers
 
 " ALE settings
 let g:ale_sign_column_always = 1
-let g:ale_fixers = {'javascript': ['prettier','eslint']}
-
-let g:ale_linters = { 'javascript': ['eslint','tsserver']}
-
+let g:ale_fixers = { 'javascript': ['prettier','eslint'] }
 let g:ale_fix_on_save = 1
-
-let g:ale_linters_explicit = 1
-
-set completeopt+=noinsert
 
 set tabstop=2
 set shiftwidth=2
-set clipboard=unnamedplus
 
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
-

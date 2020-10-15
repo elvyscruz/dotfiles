@@ -19,8 +19,11 @@ Plugin 'kien/ctrlp.vim'
 "
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
 filetype plugin indent on    " required
 
+filetype indent on
+set smartindent
 set completeopt+=noinsert
 
 syntax on  				"Syntax hihglight
@@ -28,8 +31,10 @@ set number nu				"Line Numbers
 
 " ALE settings
 let g:ale_sign_column_always = 1
-let g:ale_fixers = { 'javascript': ['prettier','eslint'] }
+let g:ale_fixers = { 'javascript': ['standard'],'html':['prettier'] } 
+let g:ale_linters = { 'javascript': ['standard'] }
 let g:ale_fix_on_save = 1
+let g:ale_lint_on_save = 1
 
 set tabstop=2
 set shiftwidth=2

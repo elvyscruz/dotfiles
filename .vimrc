@@ -15,7 +15,8 @@ Plugin 'dense-analysis/ale'
 Plugin 'townk/vim-autoclose'
 Plugin 'alvan/vim-closetag'
 Plugin 'tpope/vim-surround'
-Plugin 'kien/ctrlp.vim'
+Plugin 'preservim/nerdtree'
+
 "
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -29,10 +30,12 @@ set completeopt+=noinsert
 syntax on  				"Syntax hihglight
 set number nu				"Line Numbers
 
+set mouse=a
+
 " ALE settings
 let g:ale_sign_column_always = 1
-let g:ale_fixers = { 'javascript': ['standard'],'html':['prettier'] } 
-let g:ale_linters = { 'javascript': ['standard'] }
+let g:ale_fixers = { 'javascript': ['prettier_standard'],'html':['prettier'],'vue':['prettier_standard'] } 
+let g:ale_linters = { 'javascript': ['standard'],'vue':['eslint'] }
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_save = 1
 

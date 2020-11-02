@@ -34,8 +34,8 @@ set mouse=a
 
 " ALE settings
 let g:ale_sign_column_always = 1
-let g:ale_fixers = { 'javascript': ['prettier_standard'],'html':['prettier'],'vue':['prettier_standard'] } 
-let g:ale_linters = { 'javascript': ['standard'],'vue':['eslint'] }
+let g:ale_fixers = { 'javascript': ['eslint'],'html':['prettier'],'vue':['eslint'] } 
+let g:ale_linters = { 'javascript': ['eslint'],'vue':['eslint'] }
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_save = 1
 

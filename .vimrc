@@ -43,3 +43,7 @@ set tabstop=2
 set shiftwidth=2
 
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
+
+" Tab to autocomplete
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" : "\<TAB>"

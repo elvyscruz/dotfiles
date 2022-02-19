@@ -28,9 +28,16 @@ set smartindent
 set completeopt+=noinsert
 
 syntax on  				"Syntax hihglight
-set number nu				"Line Numbers
+
+set hlsearch    " highlight all search results
+set ignorecase  " do case insensitive search 
+set incsearch   " show incremental search results as you type
+set number      " display line number
+set noswapfile  " disable swap file     "
 
 set mouse=a
+
+"set paste
 
 " ALE settings
 let g:ale_sign_column_always = 1

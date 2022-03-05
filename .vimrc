@@ -6,6 +6,8 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 
 let g:ale_completion_enabled = 1
+let g:ale_set_balloons=1
+set ttymouse=xterm2
 
 call vundle#begin()
 
@@ -28,21 +30,14 @@ set smartindent
 set completeopt+=noinsert
 
 syntax on  				"Syntax hihglight
-
-set hlsearch    " highlight all search results
-set ignorecase  " do case insensitive search 
-set incsearch   " show incremental search results as you type
-set number      " display line number
-set noswapfile  " disable swap file     "
+set number nu				"Line Numbers
 
 set mouse=a
 
-"set paste
-
 " ALE settings
 let g:ale_sign_column_always = 1
-let g:ale_fixers = { 'javascript': ['eslint'],'html':['prettier'],'vue':['eslint'] } 
-let g:ale_linters = { 'javascript': ['eslint'],'vue':['eslint'] }
+let g:ale_fixers = { 'javascript': ['eslint'],'typescript': ['eslint'],'vue':['eslint'] } 
+let g:ale_linters = { 'javascript': ['eslint'],'typescript': ['eslint','tsserver'],'vue':['eslint'] }
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_save = 1
 
@@ -51,6 +46,5 @@ set shiftwidth=2
 
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 
-" Tab to autocomplete
 inoremap <silent><expr> <Tab>
       \ pumvisible() ? "\<C-n>" : "\<TAB>"

@@ -17,13 +17,11 @@ Plugin 'dense-analysis/ale'
 Plugin 'townk/vim-autoclose'
 Plugin 'alvan/vim-closetag'
 Plugin 'tpope/vim-surround'
-Plugin 'preservim/nerdtree'
-
 "
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
-filetype plugin indent on    " required
+filetype plugin indent on    " required 
 
 filetype indent on
 set smartindent
@@ -32,12 +30,13 @@ set completeopt+=noinsert
 syntax on  				"Syntax hihglight
 set number nu				"Line Numbers
 
+
 set mouse=a
 
 " ALE settings
 let g:ale_sign_column_always = 1
 let g:ale_fixers = { 'javascript': ['eslint'],'typescript': ['eslint'],'vue':['eslint'] } 
-let g:ale_linters = { 'javascript': ['eslint'],'typescript': ['eslint','tsserver'],'vue':['eslint'] }
+let g:ale_linters = { 'javascript': ['eslint','tsserver'],'typescript': ['eslint','tsserver'],'vue':['eslint'] }
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_save = 1
 
@@ -46,5 +45,10 @@ set shiftwidth=2
 
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 
+"use tab to autocomplete in insert mode
 inoremap <silent><expr> <Tab>
       \ pumvisible() ? "\<C-n>" : "\<TAB>"
+
+"use tab in normal mode to switch buffers
+nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:tabnext<CR>
+nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:tabprevious<CR>
